@@ -1,17 +1,20 @@
 # Exercices :
 
-Vous cherchez à mettre au point un système de calendrier basé sur des scripts réalisés en POO. La première étape pour vous est de définir une classe **Event** qui contient les différentes propriétés d’un évènement : son titre, sa date et sa description. Ces trois propriétés sont des propriétés d’instance dont la valeur sera définie à chaque appel du constructeur de **Event**. La propriété **date** sera définie sur un objet Date, qui sera instancié dans le constructeur même. Lors de l’appel du constructeur **Event**, l’utilisateur pourra passer pour le paramètre **date** une chaîne de caractères au format ISO 8601.
+Vous cherchez à créer un système d’authentification rapide avec un identifiant et un mot de passe sans passer par un formulaire HTML. L’authentification se fera via deux prompts interrogeant l’utilisateur sur son identifiant et son mot de passe. Attention, ce système ne sera pas du tout conventionnel ni sécurisé, c’est simplement un exemple pour utiliser les notions développées.
 
-## Question 1
+## Question 1 :
 
-Définir la classe Event avec toutes ces informations, et l’instancier.
+- Créez un projet avec une page connexion.html où les prompts seront lancés.
+- Créez une page traitement.html ainsi que deux scripts : connexion.js et traitement.js.
+- Créez une page connected.html contenant simplement un paragraphe « vous êtes connectés » et une page incorrect.html avec un paragraphe « l’identifiant ou mot de passe est incorrect ».
+- Importez dans connexion.html le script connexion.js et dans traitement.html le script taitement.js.
+- Créez dans connexion.js le système de prompt et créez des cookies stockant l’identifiant et le mot de passe à partir des entrées utilisateur pendant 1 heure.
 
-## Question 2
+## Question 2 :
 
-Définir une méthode d’instance permettant d’afficher pour chaque évènement une chaîne avec le format :
+Utilisez l’objet window.location pour ouvrir la page traitement.html depuis le script connexion.js une fois qu’un bouton connexion est cliqué, en ajoutant une nouvelle entrée dans l’historique de navigation. Le bouton connexion devra être créé avec JS. Créez dans traitement.js un script permettant de vérifier si les informations de connexion correspondent à :
 
-- "-------- jj/mm/aaaa --------
-- Titre de l’évènement : {titre}
-- Description : {description}"
-- Le format "jj/mm/aaaa" correspond si nous prenons un exemple à "12/07/2023".
-- Appeler la méthode définie.
+- identifiant : TonyStark
+- mdp : starktower
+
+Si c’est bien le cas, quand un bouton « espace utilisateur » est cliqué, ouvrir dans un nouvel onglet la page connected.html sinon la page incorrect.html. Le bouton espace utilisateur devra être créé avec JS. La fenêtre ouverte devra avoir une dimension de 400 / 400 px.
